@@ -1,0 +1,25 @@
+{
+  "name": "commodity-service",
+  "version": "1.0.0",
+  "description": "A microservice for serving up commodity information",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf src/codegen",
+    "codegen": "thrift-typescript --target thrift-server --sourceDir thrift --outDir src/codegen",
+    "prebuild": "npm run clean && npm run codegen",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecarlste/commodity-service.git"
+  },
+  "author": "Erik S. Carlsten",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecarlste/commodity-service/issues"
+  },
+  "homepage": "https://github.com/ecarlste/commodity-service#readme",
+  "dependencies": {
+    "@creditkarma/thrift-typescript": "^3.7.6"
+  }
+}

@@ -8,7 +8,13 @@
     "codegen": "thrift-typescript --target thrift-server --sourceDir thrift --outDir src/codegen",
     "prebuild": "npm run clean && npm run codegen",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "repository": {
     "type": "git",
@@ -29,6 +35,8 @@
   },
   "devDependencies": {
     "@creditkarma/thrift-parser": "^1.2.0",
-    "@creditkarma/thrift-typescript": "^3.7.6"
+    "@creditkarma/thrift-typescript": "^3.7.6",
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
   }
 }

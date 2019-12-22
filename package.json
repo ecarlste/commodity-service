@@ -7,6 +7,7 @@
     "clean": "rm -rf dist && rm -rf src/codegen",
     "codegen": "thrift-typescript --target thrift-server --sourceDir thrift --outDir src/codegen",
     "prebuild": "npm run clean && npm run codegen",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
